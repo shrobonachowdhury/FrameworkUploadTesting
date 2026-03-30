@@ -7,4 +7,9 @@ public class Util {
 		System.out.println("login page");
 	}
 
+	public void registeration() {
+		
+		System.out.println("registration page");
+	}
+
 }
