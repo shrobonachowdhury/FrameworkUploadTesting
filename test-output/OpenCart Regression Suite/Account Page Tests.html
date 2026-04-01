@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Login Page Tests</title>
+<title>TestNG:  Account Page Tests</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Login Page Tests</h2><table border='1' align="center">
+<h2 align='center'>Account Page Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
 <td>Started on:</td><td>Wed Apr 01 12:02:18 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>39 seconds (39238 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31551 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,7 +76,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.opencart.tests.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: com.qa.opencart.tests.LoginPageTest<br>Test method: checking if user is able to login</td>
+<td title='com.qa.opencart.tests.AccountPageTest.accountPageTitleTest()'><b>accountPageTitleTest</b><br>Test class: com.qa.opencart.tests.AccountPageTest<br>Test method: Verifying Title of Account Page</td>
 <td><div><pre>java.lang.AssertionError: expected [My Account11] but found [null]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -84,7 +84,7 @@ function toggleAllBoxes() {
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.qa.opencart.tests.LoginPageTest.loginTest(LoginPageTest.java:64)
+	at com.qa.opencart.tests.AccountPageTest.accountPageTitleTest(AccountPageTest.java:29)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -105,15 +105,15 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1212104688", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1212104688'><pre>java.lang.AssertionError: expected [My Account11] but found [null]
+</pre></div><a href='#' onClick='toggleBox("stack-trace968682090", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace968682090'><pre>java.lang.AssertionError: expected [My Account11] but found [null]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
 	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.qa.opencart.tests.LoginPageTest.loginTest(LoginPageTest.java:64)
+	at com.qa.opencart.tests.AccountPageTest.accountPageTitleTest(AccountPageTest.java:29)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -135,8 +135,8 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 </pre></div></td>
-<td>34</td>
-<td>com.qa.opencart.tests.LoginPageTest@2b4d4327</td></tr>
+<td>20</td>
+<td>com.qa.opencart.tests.AccountPageTest@3d9f5016</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -147,20 +147,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.opencart.tests.LoginPageTest.loginPageUrlTest()'><b>loginPageUrlTest</b><br>Test class: com.qa.opencart.tests.LoginPageTest<br>Test method: checking url of login page</td>
+<td title='com.qa.opencart.tests.AccountPageTest.VerifyaccountPageHeaders()'><b>VerifyaccountPageHeaders</b><br>Test class: com.qa.opencart.tests.AccountPageTest<br>Test method: checking Account Page Headers</td>
 <td></td>
 <td>0</td>
-<td>com.qa.opencart.tests.LoginPageTest@2b4d4327</td></tr>
-<tr>
-<td title='com.qa.opencart.tests.LoginPageTest.loginPageTitleTest()'><b>loginPageTitleTest</b><br>Test class: com.qa.opencart.tests.LoginPageTest<br>Test method: checking title of login page</td>
-<td></td>
-<td>0</td>
-<td>com.qa.opencart.tests.LoginPageTest@2b4d4327</td></tr>
-<tr>
-<td title='com.qa.opencart.tests.LoginPageTest.isForgotPasswordExistsTest()'><b>isForgotPasswordExistsTest</b><br>Test class: com.qa.opencart.tests.LoginPageTest<br>Test method: Checking if Forgot Password Link exists</td>
-<td></td>
-<td>0</td>
-<td>com.qa.opencart.tests.LoginPageTest@2b4d4327</td></tr>
+<td>com.qa.opencart.tests.AccountPageTest@3d9f5016</td></tr>
 </table><p>
 </body>
 </html>
