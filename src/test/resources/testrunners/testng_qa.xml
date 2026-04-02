@@ -10,10 +10,10 @@
 			/> -->
 
 	</listeners>
-   <test name="Search Page Tests">
+   <test name="Login Page Tests">
    <parameter name="browser" value="firefox"/>
   <classes>
-      <class name="com.qa.opencart.tests.SearchTest"/>
+       <class name="com.qa.opencart.tests.LoginPageTest"/>
      </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
