@@ -1,0 +1,63 @@
+pipeline {
+    agent any // Run on any available executor
+
+    stages {
+        stage('Build') {
+            steps {
+                echo ("build the project")
+              
+            }
+        }
+        stage('Run Unit Test') {
+            steps {
+                echo ("run UTs")
+              
+            }
+        }
+        stage('Run Integration Test') {
+            steps {
+                echo ("run ITs")
+              
+            }
+        }
+        stage('Deploy to DEV') {
+            steps {
+                echo ("deploy to DEV")
+              
+            }
+        }
+        stage('Deploy to QA') {
+            steps {
+                echo ("deploy to QA")
+              
+            }
+        }
+        stage('Run regression testcases on QA') {
+            steps {
+                echo ("regression tests on QA")
+              
+            }
+        }
+         stage('Deploy on stage') {
+            steps {
+                echo ("deploy on stage")
+              
+            }
+        }
+         stage('Run sanity testcases on stage') {
+            steps {
+                echo ("sanity testcases on stage")
+              
+            }
+        }
+
+        stage('Deploy on PROD') {
+            steps {
+                echo ("deploy on prod")
+              
+            }
+        }
+
+}
+
+}
