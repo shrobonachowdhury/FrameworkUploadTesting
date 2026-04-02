@@ -5,22 +5,8 @@
     <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
     <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Account Page Tests(failed)" verbose="4">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.qa.opencart.tests.AccountPageTest">
-        <methods>
-          <include name="AccountPageSetup"/>
-          <include name="Setup"/>
-          <include name="attachScreenshot"/>
-          <include name="accountPageTitleTest"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.qa.opencart.tests.AccountPageTest -->
-    </classes>
-  </test> <!-- Account Page Tests(failed) -->
   <test thread-count="5" parallel="tests" name="Login Page Tests(failed)" verbose="4">
-    <parameter name="browser" value="edge"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.qa.opencart.tests.LoginPageTest">
         <methods>
