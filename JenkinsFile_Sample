@@ -38,8 +38,8 @@ pipeline
 				bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_Regression.xml"
 				}
 			}
-			}
-			
+
+		}	
 			stage('Publish Allure Reports'){
 				steps{
 				script{
@@ -108,4 +108,4 @@ pipeline
 			 	}
 			 }
 			 
-			 }
+}
