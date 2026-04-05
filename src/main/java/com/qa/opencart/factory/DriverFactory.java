@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
 
 import org.openqa.selenium.OutputType;
@@ -12,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.qa.opencart.exceptions.BrowserException;
@@ -32,15 +35,34 @@ public class DriverFactory {
 		switch (prop.getProperty("browser").toLowerCase().trim()) {
 
 		case "chrome":
+			
+			if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+				
+				initRemoteDriver("chrome");
+			}
+			else {
 			tdlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+			}
 			System.out.println("chrome browser is launched");
 			break;
 		case "firefox":
+			if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+				
+				initRemoteDriver("firefox");
+			}
+			else {
 			tdlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+			}
 			System.out.println("Fireforx browser is launched");
 			break;
 		case "edge":
+			if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+				
+				initRemoteDriver("edge");
+			}
+			else {
 			tdlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
+			}
 			System.out.println("Edge browser is launched");
 			break;
 		case "safari":
@@ -57,6 +79,41 @@ public class DriverFactory {
 		getDriver().get(prop.getProperty("url"));
 
 		return getDriver();
+	}
+	
+	private void initRemoteDriver(String browserName) {
+		
+		switch(browserName) {
+		
+		case "chrome":
+		try {
+			tdlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")),optionsManager.getChromeOptions()));
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		break;
+		case "firefox":
+		try {
+			tdlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")),optionsManager.getFirefoxOptions()));
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		break;
+		case "edge":
+		try {
+			tdlDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")),optionsManager.getEdgeOptions()));
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		break;
+		
+		default:
+			System.out.println("please provide a valid browser name!!! " + prop.getProperty("browser"));
+			throw new BrowserException("---INVALID BROWSER PROVIDED---");
+	}
 	}
 	
 	public static WebDriver getDriver() {

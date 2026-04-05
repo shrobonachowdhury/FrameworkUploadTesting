@@ -6,14 +6,17 @@
     <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
   </listeners>
   <test thread-count="5" parallel="tests" name="Login Page Tests(failed)" verbose="4">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="edge"/>
     <classes>
       <class name="com.qa.opencart.tests.LoginPageTest">
         <methods>
-          <include name="loginTest"/>
           <include name="Setup"/>
+          <include name="loginPageTitleTest"/>
+          <include name="loginTest"/>
           <include name="attachScreenshot"/>
+          <include name="isForgotPasswordExistsTest"/>
           <include name="teardown"/>
+          <include name="loginPageUrlTest"/>
         </methods>
       </class> <!-- com.qa.opencart.tests.LoginPageTest -->
     </classes>

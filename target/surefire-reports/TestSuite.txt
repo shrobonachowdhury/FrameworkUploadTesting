@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 19, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 56.28 s <<< FAILURE! -- in TestSuite
-com.qa.opencart.tests.AccountPageTest.accountPageTitleTest -- Time elapsed: 0.133 s <<< FAILURE!
+Tests run: 19, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 60.76 s <<< FAILURE! -- in TestSuite
+com.qa.opencart.tests.AccountPageTest.accountPageTitleTest -- Time elapsed: 2.970 s <<< FAILURE!
 java.lang.AssertionError: expected [My Account11] but found [null]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -32,7 +32,7 @@ java.lang.AssertionError: expected [My Account11] but found [null]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 
-com.qa.opencart.tests.LoginPageTest.loginTest -- Time elapsed: 6.646 s <<< FAILURE!
+com.qa.opencart.tests.LoginPageTest.loginTest -- Time elapsed: 3.189 s <<< FAILURE!
 java.lang.AssertionError: expected [My Account11] but found [null]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
